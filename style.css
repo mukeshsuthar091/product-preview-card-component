@@ -1,0 +1,150 @@
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Cream);
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 14px;
+    color: var(--Dark-grayish-blue);
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    background-color: var(--White);
+    max-width: 600px;
+    margin: 100px auto 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.mobile-img{
+    display: none;
+}
+
+.images{
+    flex-basis: 50%;
+}
+
+.desktop-img{
+    vertical-align:middle;
+    height: 100%;
+}
+
+.text{
+    flex-basis: 50%;
+    padding: 30px;
+}
+
+.text p:nth-child(1){
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    
+}
+
+.text #info{
+    margin-bottom: 20px;
+    font-weight: 500;
+    line-height: 22px;
+    word-spacing: 2px;
+}
+
+.text h1{
+    color: var(--Very-dark-blue);
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.price{
+    margin-bottom: 20px;
+}
+
+.price #new-price{
+    font-size: 32px;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    color: var(--Dark-cyan);
+}
+
+.price #old-price{
+    text-decoration: line-through;
+    margin: 20px;
+    vertical-align: super;
+}
+
+.btn{
+    border: none;
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    width: 100%;
+    padding: 18px 0;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn img{
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.btn:hover{
+    background-color: #1d4234;
+    transition: 0.3s;
+}
+
+.attribution {
+    font-size: 12px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.attribution span {
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media(max-width: 500px){
+
+    .container{
+        display: block;
+        max-width: 350px;
+
+        justify-content: center; 
+    }
+
+    .desktop-img{
+        display: none;
+    }
+
+    .mobile-img{
+        display: block;
+    }
+
+    .text{
+        padding: 23px;
+    }
+}
